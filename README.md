@@ -8,7 +8,7 @@
  SQLT is a collection of script to perform data profiling & quality in your SQL database using T-SQL scripts. All the script are written in Microsoft SQL Server.
 
 ## What is database profiling?
-### According to the Wikipedia, Data profiling is the process of examining the data available from an existing information source (e.g. a database or a file) and collecting statistics or informative summaries about that data.[1] The purpose of these statistics may be to:
+ According to the Wikipedia, Data profiling is the process of examining the data available from an existing information source (e.g. a database or a file) and collecting statistics or informative summaries about that data.[1] The purpose of these statistics may be to:
 
 #### 1. Find out whether existing data can be easily used for other purposes
 #### 2. Improve the ability to search data by tagging it with keywords, descriptions, or assigning it to a category
@@ -20,18 +20,18 @@
 #### 8. Have an enterprise view of all data, for uses such as master data management, where key data is needed, or data governance for improving data quality.
 
 ## How data profile is conducted?
-### Data profiling utilizes methods of descriptive statistics such as minimum, maximum, mean, mode, percentile, standard deviation, frequency, variation, aggregates such as count and sum, and additional metadata information obtained during data profiling such as data type, length, discrete values, uniqueness, occurrence of null values, typical string patterns, and abstract type recognition. The metadata can then be used to discover problems such as illegal values, misspellings, missing values, varying value representation, and duplicates.
+ Data profiling utilizes methods of descriptive statistics such as minimum, maximum, mean, mode, percentile, standard deviation, frequency, variation, aggregates such as count and sum, and additional metadata information obtained during data profiling such as data type, length, discrete values, uniqueness, occurrence of null values, typical string patterns, and abstract type recognition. The metadata can then be used to discover problems such as illegal values, misspellings, missing values, varying value representation, and duplicates.
 
 ## SQLT details
-### SQLT is a collection of script where each script is participating to help you profiling your data. As this is the initial release, we are launching the basic data profiling methods.
+ SQLT is a collection of script where each script is participating to help you profiling your data. As this is the initial release, we are launching the basic data profiling methods.
 
-### sqlt.DQC_DB_LEVEL - Execute all the DQC or profiling method for the given database (all the tables).
-### sqlt.DQC_DISTINCT_COLUMN_COUNT - Distinct values for all the columns for the given table.
-### sqlt.DQC_MAX_MIN_LENGTH - Minimun and Maximum length of string type column values.
-### sqlt.DQC_MAX_MIN_VALUE - Minimum & Maximum (Range) of all the numeric fields.
-### sqlt.DQC_MISSING_VALUES_COUNT - Count of missing values for all the fields.
-### sqlt.DQC_SPECIAL_CHARACTER - Count of columns containing special character(s) with customized REGEX string.
-### sqlt.DQC_TOTAL_COUNT - total row count comparison for the table.
+1. sqlt.DQC_DB_LEVEL - Execute all the DQC or profiling method for the given database (all the tables).
+2. sqlt.DQC_DISTINCT_COLUMN_COUNT - Distinct values for all the columns for the given table.
+3. sqlt.DQC_MAX_MIN_LENGTH - Minimun and Maximum length of string type column values.
+4. sqlt.DQC_MAX_MIN_VALUE - Minimum & Maximum (Range) of all the numeric fields.
+5. sqlt.DQC_MISSING_VALUES_COUNT - Count of missing values for all the fields.
+6. sqlt.DQC_SPECIAL_CHARACTER - Count of columns containing special character(s) with customized REGEX string.
+7. sqlt.DQC_TOTAL_COUNT - total row count comparison for the table.
 
 ## Setup
 ### Step 1 - Open SSMS query window. Go to Query -> SQLCMD Mode
@@ -50,15 +50,15 @@
 
 
 ### Run DQC for the  whole database
-#### Go to procedures & execute sqlt.DQC_DB_LEVEL.
-#### sqlt.DQC_DB_LEVEL @db_name = 'YOUR DB'
+ Go to procedures & execute sqlt.DQC_DB_LEVEL.
+ e.g. sqlt.DQC_DB_LEVEL @db_name = 'YOUR DB'
 
 ## Run DQC for individual table
-#### You can run DQC procedure individually.
-#### sqlt.DQC_DISTINCT_COLUMN_COUNT @table_name = 'Table-Name'
+ You can run DQC procedure individually.
+ e.g. sqlt.DQC_DISTINCT_COLUMN_COUNT @table_name = 'Table-Name'
 
 ## Examples
-####  EXEC sqlt.DQC_TOTAL_COUNT @table_name = 'EmployeeDest', @predicted_value=2
+#### EXEC sqlt.DQC_TOTAL_COUNT @table_name = 'EmployeeDest', @predicted_value=2
 #### EXEC sqlt.DQC_TOTAL_COUNT @table_name = 'EmployeeDest', @predicted_value=4
 #### EXEC sqlt.DQC_MISSING_VALUES_COUNT @table_name = 'SALES'
 #### EXEC sqlt.DQC_SPECIAL_CHARACTER @table_name = 'SALES'
@@ -67,6 +67,6 @@
 #### EXEC sqlt.DQC_DISTINCT_COLUMN_COUNT @table_name = 'EMPLOYEE'
 #### EXEC sqlt.DQC_DB_LEVEL @db_name ='AdventureWorksDW2019'
 
-#### As this is the first version of the scripts, we have included only basic DQC. In future commit we are planning to include statistical profiling, meta profiling (Number of partitions, partition size, type of partition). 
+As this is the first version of the scripts, we have included only basic DQC. In future commit we are planning to include statistical profiling, meta profiling (Number of partitions, partition size, type of partition). 
 
 ## Keep Supporting...
