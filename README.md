@@ -1,4 +1,4 @@
-# SQL-DQC
+# SQLT - Data Profiling & Quality Checks using T-SQL commands
 
 ## What is SQLT?
 ### SQLT is a collection of script to perform data profiling & quality in your SQL database using T-SQL scripts. All the script are written in Microsoft SQL Server.
