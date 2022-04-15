@@ -10,14 +10,14 @@
 ## What is database profiling?
  According to the Wikipedia, Data profiling is the process of examining the data available from an existing information source (e.g. a database or a file) and collecting statistics or informative summaries about that data.[1] The purpose of these statistics may be to:
 
-#### 1. Find out whether existing data can be easily used for other purposes
-#### 2. Improve the ability to search data by tagging it with keywords, descriptions, or assigning it to a category
-#### 3. Assess data quality, including whether the data conforms to particular standards or patterns[2]
-#### 4. Assess the risk involved in integrating data in new applications, including the challenges of joins
-#### 5. Discover metadata of the source database, including value patterns and distributions, key candidates, foreign-key candidates, and functional dependencies
-#### 6. Assess whether known metadata accurately describes the actual values in the source database
-#### 7. Understanding data challenges early in any data intensive project, so that late project surprises are avoided. Finding data problems late in the project can lead to delays and cost overruns.
-#### 8. Have an enterprise view of all data, for uses such as master data management, where key data is needed, or data governance for improving data quality.
+1. Find out whether existing data can be easily used for other purposes
+2. Improve the ability to search data by tagging it with keywords, descriptions, or assigning it to a category
+3. Assess data quality, including whether the data conforms to particular standards or patterns[2]
+4. Assess the risk involved in integrating data in new applications, including the challenges of joins
+5. Discover metadata of the source database, including value patterns and distributions, key candidates, foreign-key candidates, and functional dependencies
+6. Assess whether known metadata accurately describes the actual values in the source database
+7. Understanding data challenges early in any data intensive project, so that late project surprises are avoided. Finding data problems late in the project can lead to delays and cost overruns.
+8. Have an enterprise view of all data, for uses such as master data management, where key data is needed, or data governance for improving data quality.
 
 ## How data profile is conducted?
  Data profiling utilizes methods of descriptive statistics such as minimum, maximum, mean, mode, percentile, standard deviation, frequency, variation, aggregates such as count and sum, and additional metadata information obtained during data profiling such as data type, length, discrete values, uniqueness, occurrence of null values, typical string patterns, and abstract type recognition. The metadata can then be used to discover problems such as illegal values, misspellings, missing values, varying value representation, and duplicates.
@@ -58,14 +58,14 @@
  e.g. sqlt.DQC_DISTINCT_COLUMN_COUNT @table_name = 'Table-Name'
 
 ## Examples
-#### EXEC sqlt.DQC_TOTAL_COUNT @table_name = 'EmployeeDest', @predicted_value=2
-#### EXEC sqlt.DQC_TOTAL_COUNT @table_name = 'EmployeeDest', @predicted_value=4
-#### EXEC sqlt.DQC_MISSING_VALUES_COUNT @table_name = 'SALES'
-#### EXEC sqlt.DQC_SPECIAL_CHARACTER @table_name = 'SALES'
-#### EXEC sqlt.DQC_MAX_MIN_LENGTH @table_name = 'EMPLOYEEDEST'
-#### EXEC sqlt.DQC_MAX_MIN_VALUE @table_name = 'SALES'
-#### EXEC sqlt.DQC_DISTINCT_COLUMN_COUNT @table_name = 'EMPLOYEE'
-#### EXEC sqlt.DQC_DB_LEVEL @db_name ='AdventureWorksDW2019'
+1. EXEC sqlt.DQC_TOTAL_COUNT @table_name = 'EmployeeDest', @predicted_value=2
+2. EXEC sqlt.DQC_TOTAL_COUNT @table_name = 'EmployeeDest', @predicted_value=4
+3. EXEC sqlt.DQC_MISSING_VALUES_COUNT @table_name = 'SALES'
+4. EXEC sqlt.DQC_SPECIAL_CHARACTER @table_name = 'SALES'
+5. EXEC sqlt.DQC_MAX_MIN_LENGTH @table_name = 'EMPLOYEEDEST'
+6. EXEC sqlt.DQC_MAX_MIN_VALUE @table_name = 'SALES'
+7. EXEC sqlt.DQC_DISTINCT_COLUMN_COUNT @table_name = 'EMPLOYEE'
+8. EXEC sqlt.DQC_DB_LEVEL @db_name ='AdventureWorksDW2019'
 
 As this is the first version of the scripts, we have included only basic DQC. In future commit we are planning to include statistical profiling, meta profiling (Number of partitions, partition size, type of partition). 
 
