@@ -1,5 +1,9 @@
 # SQLT - Data Profiling & Quality Checks using T-SQL commands
 
+#### Author: Martand Singh
+#### Email: martandsays@gmail.com
+#### Facebook: https://www.facebook.com/CodeMakerz
+
 ## What is SQLT?
 ### SQLT is a collection of script to perform data profiling & quality in your SQL database using T-SQL scripts. All the script are written in Microsoft SQL Server.
 
