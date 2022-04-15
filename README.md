@@ -5,7 +5,7 @@
 #### Facebook: https://www.facebook.com/CodeMakerz
 
 ## What is SQLT?
-### SQLT is a collection of script to perform data profiling & quality in your SQL database using T-SQL scripts. All the script are written in Microsoft SQL Server.
+ SQLT is a collection of script to perform data profiling & quality in your SQL database using T-SQL scripts. All the script are written in Microsoft SQL Server.
 
 ## What is database profiling?
 ### According to the Wikipedia, Data profiling is the process of examining the data available from an existing information source (e.g. a database or a file) and collecting statistics or informative summaries about that data.[1] The purpose of these statistics may be to:
