@@ -39,4 +39,30 @@
 ### Step 3 - Press F5 or run
 <img width="954" alt="STEP3-COMMANDRUN" src="https://user-images.githubusercontent.com/32331579/163580822-df8a6024-3f94-4ff8-95d6-dafe301567fc.png">
 
+## How to use it?
+### All the DQC output will be saved in a table named sqlt.assertlog. You can select this table to check the output.
 
+<img width="943" alt="image" src="https://user-images.githubusercontent.com/32331579/163581719-2ed01adb-1380-4772-8eee-da267a838bc6.png">
+
+
+### Run DQC for the  whole database
+#### Go to procedures & execute sqlt.DQC_DB_LEVEL.
+#### sqlt.DQC_DB_LEVEL @db_name = 'YOUR DB'
+
+## Run DQC for individual table
+#### You can run DQC procedure individually.
+#### sqlt.DQC_DISTINCT_COLUMN_COUNT @table_name = 'Table-Name'
+
+## Examples
+####  EXEC sqlt.DQC_TOTAL_COUNT @table_name = 'EmployeeDest', @predicted_value=2
+#### EXEC sqlt.DQC_TOTAL_COUNT @table_name = 'EmployeeDest', @predicted_value=4
+#### EXEC sqlt.DQC_MISSING_VALUES_COUNT @table_name = 'SALES'
+#### EXEC sqlt.DQC_SPECIAL_CHARACTER @table_name = 'SALES'
+#### EXEC sqlt.DQC_MAX_MIN_LENGTH @table_name = 'EMPLOYEEDEST'
+#### EXEC sqlt.DQC_MAX_MIN_VALUE @table_name = 'SALES'
+#### EXEC sqlt.DQC_DISTINCT_COLUMN_COUNT @table_name = 'EMPLOYEE'
+#### EXEC sqlt.DQC_DB_LEVEL @db_name ='AdventureWorksDW2019'
+
+#### As this is the first version of the scripts, we have included only basic DQC. In future commit we are planning to include statistical profiling, meta profiling (Number of partitions, partition size, type of partition). 
+
+## Keep Supporting...
